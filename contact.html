@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Preston Legal Services for South African legal inquiries">
+    <title>Preston Legal Services - Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Preston Legal Services</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tools.html">Legal Tools</a></li>
+                <li><a href="law-firms.html">Find a Law Firm</a></li>
+                <li><a href="resources.html">Legal Resources</a></li>
+                <li><a href="courts-gov.html">Courts & Government</a></li>
+                <li><a href="chatbot.html">AI Legal Assistant</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required aria-label="Your name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-label="Your email">
+
+            <label for="subject">Legal Subject</label>
+            <select id="subject" name="subject" required aria-label="Select legal subject">
+                <option value="">Select a Subject</option>
+                <option value="family">Family Law</option>
+                <option value="criminal">Criminal Law</option>
+                <option value="commercial">Commercial Law</option>
+                <option value="property">Property Law</option>
+                <option value="delict">Delict (Tort)</option>
+                <option value="estate">Estate Planning</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required aria-label="Your message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Preston Legal Services. All rights reserved. <a href="terms.html">Terms of Use</a></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

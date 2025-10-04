@@ -1,0 +1,679 @@
+/* 90s Luxury Aesthetic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #F1E9D2; /* Ivory */
+    background-color: #3C1014; /* Deep Burgundy */
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(180deg, #1B263B, #3C1014); /* Midnight Blue to Deep Burgundy */
+    color: #F1E9D2;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #B8860B; /* Antique Gold */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #B8860B; /* Antique Gold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #F1E9D2;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover, nav ul li a[aria-current="page"] {
+    color: #B8860B;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #B8860B;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #F1E9D2;
+    text-align: center;
+    padding: 120px 20px;
+    border-bottom: 4px solid #B8860B;
+}
+
+.hero h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero .marquee {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #B8860B;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.btn {
+    background: linear-gradient(45deg, #B8860B, #DAA520); /* Antique Gold Gradient */
+    color: #1B263B;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border: 1px solid #F1E9D2;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #DAA520, #B8860B);
+}
+
+/* Services Section */
+.services {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #1B263B; /* Midnight Blue */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #F1E9D2;
+    color: #1B263B;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #B8860B;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+
+/* Legal Tools Section */
+.tools {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #1B263B;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tools h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background-color: #F1E9D2;
+    color: #1B263B;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #B8860B;
+    transition: transform 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-card h3 {
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+
+.tool-card a, .tool-card button {
+    background: linear-gradient(45deg, #B8860B, #DAA520);
+    color: #1B263B;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.tool-card button:hover, .tool-card a:hover {
+    background: linear-gradient(45deg, #DAA520, #B8860B);
+}
+
+/* Find a Law Firm Section */
+.law-firms {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #1B263B;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.law-firms h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.law-firms-disclaimer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #F1E9D2;
+    margin-bottom: 1rem;
+}
+
+.law-firm-search {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.law-firm-search input, .law-firm-search select, .law-firm-search button {
+    padding: 10px;
+    border: 1px solid #B8860B;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    background-color: #F1E9D2;
+    color: #1B263B;
+}
+
+.law-firm-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F1E9D2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.law-firm-table th, .law-firm-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #B8860B;
+    color: #1B263B;
+}
+
+.law-firm-table th {
+    background: linear-gradient(45deg, #B8860B, #DAA520);
+    color: #1B263B;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.law-firm-table th:hover {
+    background: linear-gradient(45deg, #DAA520, #B8860B);
+}
+
+.law-firm-table tr:hover {
+    background-color: #E6D5B8;
+}
+
+/* Legal Resources Section */
+.resources {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #1B263B;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.resources h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.resources a {
+    color: #B8860B;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.resources a:hover {
+    color: #DAA520;
+    text-shadow: 0 0 5px #B8860B;
+}
+
+/* Courts & Government Offices Section */
+.courts-gov {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #1B263B;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.courts-gov h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.courts-gov-disclaimer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #F1E9D2;
+    margin-bottom: 1rem;
+}
+
+.courts-gov-search {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.courts-gov-search select {
+    padding: 10px;
+    border: 1px solid #B8860B;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    background-color: #F1E9D2;
+    color: #1B263B;
+}
+
+.province-map {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.province-map img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #B8860B;
+    border-radius: 10px;
+}
+
+.courts-gov-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F1E9D2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.courts-gov-table th, .courts-gov-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #B8860B;
+    color: #1B263B;
+}
+
+.courts-gov-table th {
+    background: linear-gradient(45deg, #B8860B, #DAA520);
+    color: #1B263B;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.courts-gov-table th:hover {
+    background: linear-gradient(45deg, #DAA520, #B8860B);
+}
+
+.courts-gov-table tr:hover {
+    background-color: #E6D5B8;
+}
+
+/* Chatbot Section */
+.chatbot {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #1B263B;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.chatbot-disclaimer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #F1E9D2;
+    margin-bottom: 1rem;
+}
+
+.chat-window {
+    background-color: #F1E9D2;
+    border: 1px solid #B8860B;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    margin-bottom: 1rem;
+}
+
+.chat-message {
+    margin-bottom: 1rem;
+}
+
+.chat-message.user {
+    text-align: right;
+}
+
+.chat-message.user span {
+    background: linear-gradient(45deg, #B8860B, #DAA520);
+    color: #1B263B;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 70%;
+}
+
+.chat-message.bot {
+    text-align: left;
+}
+
+.chat-message.bot span {
+    background-color: #8B0000; /* Dark Red */
+    color: #F1E9D2;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 70%;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #B8860B;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+    background-color: #F1E9D2;
+    color: #1B263B;
+}
+
+.chat-input button {
+    background: linear-gradient(45deg, #B8860B, #DAA520);
+    color: #1B263B;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.chat-input button:hover {
+    background: linear-gradient(45deg, #DAA520, #B8860B);
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(180deg, #3C1014, #1B263B);
+    padding: 50px 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #F1E9D2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #B8860B;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #1B263B;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #B8860B;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+    background-color: #E6D5B8;
+    color: #1B263B;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background: linear-gradient(45deg, #B8860B, #DAA520);
+    color: #1B263B;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(45deg, #DAA520, #B8860B);
+}
+
+/* Terms Section */
+.terms {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #1B263B;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.terms h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+.terms h3 {
+    margin-top: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #B8860B;
+}
+
+.terms p, .terms a {
+    font-size: 1.1rem;
+    color: #F1E9D2;
+}
+
+.terms a {
+    color: #B8860B;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: #DAA520;
+    text-shadow: 0 0 5px #B8860B;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(180deg, #1B263B, #3C1014);
+    color: #F1E9D2;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #B8860B;
+}
+
+footer p, footer a {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #F1E9D2;
+}
+
+footer a {
+    color: #B8860B;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #DAA520;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .law-firm-table, .courts-gov-table {
+        font-size: 0.9rem;
+    }
+
+    .law-firm-table th, .law-firm-table td,
+    .courts-gov-table th, .courts-gov-table td {
+        padding: 10px;
+    }
+
+    .law-firm-search, .courts-gov-search {
+        flex-direction: column;
+    }
+
+    .hero .marquee {
+        font-size: 1.2rem;
+    }
+}

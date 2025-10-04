@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find registered South African law firms with Preston Legal Services">
+    <title>Preston Legal Services - Find a Law Firm</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Preston Legal Services</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tools.html">Legal Tools</a></li>
+                <li><a href="law-firms.html" aria-current="page">Find a Law Firm</a></li>
+                <li><a href="resources.html">Legal Resources</a></li>
+                <li><a href="courts-gov.html">Courts & Government</a></li>
+                <li><a href="chatbot.html">AI Legal Assistant</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="law-firms" class="law-firms">
+        <h2>Find a Registered Law Firm</h2>
+        <p class="law-firms-disclaimer">Disclaimer: This is a sample list of prominent law firms. To verify a firm’s registration or find additional firms, contact the Legal Practice Council at <a href="mailto:info@lpc.org.za">info@lpc.org.za</a> or +27 (0)10 001 8500.</p>
+        <div class="law-firm-search">
+            <button onclick="getUserLocation()" class="btn">Use My Location</button>
+            <input type="text" id="locationInput" placeholder="Enter city or province (e.g., Johannesburg, Gauteng)..." oninput="filterFirms()">
+            <select id="practiceFilter" onchange="filterFirms()">
+                <option value="">All Practice Areas</option>
+                <option value="Corporate Law">Corporate Law</option>
+                <option value="Intellectual Property">Intellectual Property</option>
+                <option value="Litigation">Litigation</option>
+                <option value="Property Law">Property Law</option>
+            </select>
+        </div>
+        <table class="law-firm-table" id="firmTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0, 'firmTable')">Firm Name</th>
+                    <th onclick="sortTable(1, 'firmTable')">Location</th>
+                    <th onclick="sortTable(2, 'firmTable')">Practice Area</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody id="firmTableBody">
+                <tr>
+                    <td>Werksmans Attorneys</td>
+                    <td>Johannesburg, Gauteng</td>
+                    <td>Corporate Law</td>
+                    <td><a href="mailto:info@werksmans.com">info@werksmans.com</a></td>
+                </tr>
+                <tr>
+                    <td>ENSAfrica</td>
+                    <td>Sandton, Gauteng</td>
+                    <td>Intellectual Property</td>
+                    <td><a href="mailto:info@ensafrica.com">info@ensafrica.com</a></td>
+                </tr>
+                <tr>
+                    <td>Webber Wentzel</td>
+                    <td>Cape Town, Western Cape</td>
+                    <td>Corporate Law</td>
+                    <td><a href="mailto:info@webberwentzel.com">info@webberwentzel.com</a></td>
+                </tr>
+                <tr>
+                    <td>Cliffe Dekker Hofmeyr</td>
+                    <td>Sandton, Gauteng</td>
+                    <td>Litigation</td>
+                    <td><a href="mailto:info@cdhlegal.com">info@cdhlegal.com</a></td>
+                </tr>
+                <tr>
+                    <td>Adams & Adams</td>
+                    <td>Pretoria, Gauteng</td>
+                    <td>Intellectual Property</td>
+                    <td><a href="mailto:mail@adams.africa">mail@adams.africa</a></td>
+                </tr>
+                <tr>
+                    <td>Bowmans</td>
+                    <td>Cape Town, Western Cape</td>
+                    <td>Corporate Law</td>
+                    <td><a href="mailto:info@bowmanslaw.com">info@bowmanslaw.com</a></td>
+                </tr>
+                <tr>
+                    <td>Spoor & Fisher</td>
+                    <td>Pretoria, Gauteng</td>
+                    <td>Intellectual Property</td>
+                    <td><a href="mailto:info@spoor.com">info@spoor.com</a></td>
+                </tr>
+                <tr>
+                    <td>Norton Rose Fulbright</td>
+                    <td>Durban, KwaZulu-Natal</td>
+                    <td>Litigation</td>
+                    <td><a href="mailto:southafrica@nortonrosefulbright.com">southafrica@nortonrosefulbright.com</a></td>
+                </tr>
+                <tr>
+                    <td>STBB - Smith Tabata Buchanan Boyes</td>
+                    <td>Cape Town, Western Cape</td>
+                    <td>Property Law</td>
+                    <td><a href="mailto:info@stbb.co.za">info@stbb.co.za</a></td>
+                </tr>
+                <tr>
+                    <td>DSC Attorneys</td>
+                    <td>Cape Town, Western Cape</td>
+                    <td>Litigation</td>
+                    <td><a href="mailto:info@dsclaw.co.za">info@dsclaw.co.za</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Preston Legal Services. All rights reserved. <a href="terms.html">Terms of Use</a></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find South African courts and government offices with Preston Legal Services">
+    <title>Preston Legal Services - Courts & Government</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Preston Legal Services</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tools.html">Legal Tools</a></li>
+                <li><a href="law-firms.html">Find a Law Firm</a></li>
+                <li><a href="resources.html">Legal Resources</a></li>
+                <li><a href="courts-gov.html" aria-current="page">Courts & Government</a></li>
+                <li><a href="chatbot.html">AI Legal Assistant</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="courts-gov" class="courts-gov">
+        <h2>Find Courts & Government Offices</h2>
+        <p class="courts-gov-disclaimer">Disclaimer: This is a sample list of major courts and government offices. For a complete directory, visit <a href="https://www.gov.za/about-government/contact-directory" target="_blank">SA Government Contact Directory</a> or <a href="https://www.justice.gov.za/courts.html" target="_blank">Department of Justice Courts</a>.</p>
+        <div class="courts-gov-search">
+            <select id="courtsGovProvinceFilter" onchange="filterCourtsGov()">
+                <option value="">All Provinces</option>
+                <option value="Gauteng">Gauteng</option>
+                <option value="Western Cape">Western Cape</option>
+                <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                <option value="Eastern Cape">Eastern Cape</option>
+            </select>
+        </div>
+        <div class="province-map">
+            <img src="images/sa-map.svg" alt="Interactive South Africa Province Map" usemap="#sa-map">
+            <map name="sa-map">
+                <area shape="rect" coords="200,300,300,400" href="#" onclick="setProvinceFilter('Gauteng')" alt="Gauteng">
+                <area shape="rect" coords="100,400,200,500" href="#" onclick="setProvinceFilter('Western Cape')" alt="Western Cape">
+                <area shape="rect" coords="300,350,400,450" href="#" onclick="setProvinceFilter('KwaZulu-Natal')" alt="KwaZulu-Natal">
+                <area shape="rect" coords="250,400,350,500" href="#" onclick="setProvinceFilter('Eastern Cape')" alt="Eastern Cape">
+            </map>
+        </div>
+        <table class="courts-gov-table" id="courtsGovTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0, 'courtsGovTable')">Name</th>
+                    <th onclick="sortTable(1, 'courtsGovTable')">Type</th>
+                    <th onclick="sortTable(2, 'courtsGovTable')">Location</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody id="courtsGovTableBody">
+                <tr>
+                    <td>Constitutional Court</td>
+                    <td>Court</td>
+                    <td>Johannesburg, Gauteng</td>
+                    <td><a href="mailto:info@concourt.org.za">info@concourt.org.za</a></td>
+                </tr>
+                <tr>
+                    <td>Gauteng High Court, Johannesburg</td>
+                    <td>Court</td>
+                    <td>Johannesburg, Gauteng</td>
+                    <td><a href="tel:+27113359000">+27 (0)11 335 9000</a></td>
+                </tr>
+                <tr>
+                    <td>Western Cape High Court</td>
+                    <td>Court</td>
+                    <td>Cape Town, Western Cape</td>
+                    <td><a href="tel:+27214802411">+27 (0)21 480 2411</a></td>
+                </tr>
+                <tr>
+                    <td>Durban Magistrates’ Court</td>
+                    <td>Court</td>
+                    <td>Durban, KwaZulu-Natal</td>
+                    <td><a href="tel:+27313068411">+27 (0)31 306 8411</a></td>
+                </tr>
+                <tr>
+                    <td>Port Elizabeth Magistrates’ Court</td>
+                    <td>Court</td>
+                    <td>Port Elizabeth, Eastern Cape</td>
+                    <td><a href="tel:+27415021111">+27 (0)41 502 1111</a></td>
+                </tr>
+                <tr>
+                    <td>Department of Home Affairs, Pretoria</td>
+                    <td>Government Office</td>
+                    <td>Pretoria, Gauteng</td>
+                    <td><a href="tel:+27800801190">+27 (0)80 060 1190</a></td>
+                </tr>
+                <tr>
+                    <td>CIPC Head Office</td>
+                    <td>Government Office</td>
+                    <td>Pretoria, Gauteng</td>
+                    <td><a href="mailto:info@cipc.co.za">info@cipc.co.za</a></td>
+                </tr>
+                <tr>
+                    <td>Department of Justice, Cape Town</td>
+                    <td>Government Office</td>
+                    <td>Cape Town, Western Cape</td>
+                    <td><a href="tel:+27214671720">+27 (0)21 467 1720</a></td>
+                </tr>
+                <tr>
+                    <td>SARS Durban Branch</td>
+                    <td>Government Office</td>
+                    <td>Durban, KwaZulu-Natal</td>
+                    <td><a href="tel:+27800720000">+27 (0)80 072 0000</a></td>
+                </tr>
+                <tr>
+                    <td>Department of Labour, Port Elizabeth</td>
+                    <td>Government Office</td>
+                    <td>Port Elizabeth, Eastern Cape</td>
+                    <td><a href="tel:+27415067000">+27 (0)41 506 7000</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Preston Legal Services. All rights reserved. <a href="terms.html">Terms of Use</a></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

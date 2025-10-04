@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ask our AI Legal Assistant for South African legal information">
+    <title>Preston Legal Services - AI Legal Assistant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Preston Legal Services</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tools.html">Legal Tools</a></li>
+                <li><a href="law-firms.html">Find a Law Firm</a></li>
+                <li><a href="resources.html">Legal Resources</a></li>
+                <li><a href="courts-gov.html">Courts & Government</a></li>
+                <li><a href="chatbot.html" aria-current="page">AI Legal Assistant</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="chatbot" class="chatbot">
+        <h2>Ask Our AI Legal Assistant</h2>
+        <p class="chatbot-disclaimer">Disclaimer: This AI provides general legal information based on South African law, not specific legal advice. Consult a licensed attorney admitted under the Legal Practice Act 28 of 2014 for personalized guidance.</p>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-message bot">
+                <span>Welcome to Preston Legal Services’ AI Assistant. Ask about South African law, law firms, courts, or government offices, and I’ll provide general information to guide you.</span>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your legal question here..." required aria-label="Enter your legal question">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Preston Legal Services. All rights reserved. <a href="terms.html">Terms of Use</a></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
